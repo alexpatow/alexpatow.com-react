@@ -1,6 +1,6 @@
 @import '../../styles.scss';
 
-.card-container:hover {
+.experience-card .card-container:hover {
   margin-bottom: 1.5rem;
   margin-top: -0.5rem;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 24px 0 rgba(0, 0, 0, 0.19);
@@ -23,7 +23,7 @@
   }
 }
 
-.card-container {
+.experience-card .card-container {
   background-color: $white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 0.33rem;
@@ -34,7 +34,7 @@
   }
 }
 
-.card-header {
+.experience-card .card-header {
   h5,
   h5 {
     line-height: 1;
@@ -43,38 +43,38 @@
   }
 }
 
-.card-line {
+.experience-card .card-line {
   color: $light-gray;
   line-height: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.card-body {
+.experience-card .card-body {
   margin-bottom: 1rem;
   p {
     margin-bottom: 0;
   }
 }
 
-.card-body.expanded {
+.experience-card .card-body.expanded {
   height: 100%;
 }
 
-.card-button-container {
+.experience-card .card-button-container {
   margin-bottom: 0;
   button {
     margin-bottom: 0;
   }
 }
 
-img {
+.experience-card img {
   height: 10rem;
   object-fit: contain;
   align-self: center;
 }
 
-.card-body-section {
+.experience-card .card-body-section {
   ul {
     margin-left: 0.5rem;
   }
@@ -86,7 +86,7 @@ img {
   }
 }
 
-.row-structure {
+.row-structure.experience-card  {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
@@ -105,22 +105,22 @@ img {
   }
 }
 
-.flex-row {
+.experience-card .flex-row {
   display: flex;
 }
 
 @media only screen and (max-width: 1050px) {
-  .row-structure {
+  .experience-card .row-structure {
     margin-bottom: inherit;
   }
-  .hide-on-mobile {
+  .experience-card .hide-on-mobile {
     display: none;
   }
-  img {
+  .experience-card img {
     height: 5rem;
     padding-bottom: 1rem;
   }
-  .flex-row {
+  .experience-card .flex-row {
     display: block;
   }
 }

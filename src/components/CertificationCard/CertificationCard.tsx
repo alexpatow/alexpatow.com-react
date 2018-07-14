@@ -33,7 +33,6 @@ export const CertificationCard = ({ certification }: IProps) => {
           className="six columns"
           aria-label="open certificate"
           onClick={() => {
-            // tslint:disable-line
             handleButtonClicked(certification.certificateLink);
           }}
         >
@@ -43,7 +42,6 @@ export const CertificationCard = ({ certification }: IProps) => {
           className="six columns"
           aria-label="open external certification link"
           onClick={() => {
-            // tslint:disable-line
             handleButtonClicked(certification.additionalInfoLink);
           }}
         >

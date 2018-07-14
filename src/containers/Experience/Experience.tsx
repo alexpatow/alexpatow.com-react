@@ -5,8 +5,14 @@ import { experiences } from '../../data/experiences';
 import './Experience.css';
 
 export const Experience = () => {
-  const experienceCards = experiences.map(experience => {
-    return <ExperienceCard experience={experience} key={experience.id} />;
+  const experienceCards = experiences.map((experience, index, array) => {
+    return (
+      <ExperienceCard
+        experience={experience}
+        key={experience.id}
+        lastCard={index === array.length - 1}
+      />
+    );
   });
   return (
     <div>

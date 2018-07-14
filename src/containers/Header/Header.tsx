@@ -32,7 +32,6 @@ export const Header = ({}) => {
         <div className="button-group">
           <button
             aria-label="scroll to experience section"
-            // tslint:disable-next-line
             onClick={() => {
               goToElement('experience');
             }}
@@ -41,7 +40,6 @@ export const Header = ({}) => {
           </button>
           <button
             aria-label="scroll to projects section"
-            // tslint:disable-next-line
             onClick={() => {
               goToElement('projects');
             }}
@@ -50,7 +48,6 @@ export const Header = ({}) => {
           </button>
           <button
             aria-label="open https://github.com/alexpatow"
-            // tslint:disable-next-line
             onClick={() => {
               goToGithub();
             }}
@@ -60,7 +57,6 @@ export const Header = ({}) => {
           </button>
           <button
             aria-label="open resume"
-            // tslint:disable-next-line
             onClick={() => {
               goToResume();
             }}

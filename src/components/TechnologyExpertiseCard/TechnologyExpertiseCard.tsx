@@ -26,7 +26,6 @@ export const TechnologyExpertiseCard = ({ technology }: IProps) => {
       <div className="row card-button-container">
         <button
           className="offset-by-four four columns"
-          // tslint:disable-next-line
           onClick={() => {
             handleMoreInfoButtonClicked();
           }}

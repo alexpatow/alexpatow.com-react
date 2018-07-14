@@ -32,7 +32,6 @@ export const ProjectCard = ({ project }: IProps) => {
         <button
           className="six columns"
           aria-label="open github project"
-          // tslint:disable-next-line
           onClick={() => {
             handleButtonClicked(project.repoLink);
           }}
@@ -42,7 +41,6 @@ export const ProjectCard = ({ project }: IProps) => {
         <button
           className="six columns"
           aria-label="open external project link"
-          // tslint:disable-next-line
           onClick={() => {
             handleButtonClicked(project.additionalInfoLink!);
           }}
