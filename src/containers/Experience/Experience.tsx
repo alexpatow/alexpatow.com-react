@@ -10,7 +10,9 @@ export const Experience = () => {
   });
   return (
     <div>
-      <h2 className="experiences">Experience</h2>
+      <h2 className="experiences" id="experience">
+        Experience
+      </h2>
       {experienceCards}
     </div>
   );
