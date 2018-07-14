@@ -1,0 +1,126 @@
+@import '../../styles.scss';
+
+.card-container:hover {
+  margin-bottom: 1.5rem;
+  margin-top: -0.5rem;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 24px 0 rgba(0, 0, 0, 0.19);
+  transition-duration: 0.5s;
+  transition-property: margin, box-shadow;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  .card-header {
+    h5,
+    h6 {
+      color: $elf-green;
+    }
+  }
+
+  button {
+    border-color: $elf-green;
+    color: $elf-green;
+    transition-duration: 0.5s;
+    transition-property: color, border-color;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  }
+}
+
+.card-container {
+  background-color: $white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.33rem;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  .row {
+    margin-bottom: 0;
+  }
+}
+
+.card-header {
+  h5,
+  h5 {
+    line-height: 1;
+    margin-bottom: 1rem;
+    color: $elephant;
+  }
+}
+
+.card-line {
+  color: $light-gray;
+  line-height: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-body {
+  margin-bottom: 1rem;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.card-body.expanded {
+  height: 100%;
+}
+
+.card-button-container {
+  margin-bottom: 0;
+  button {
+    margin-bottom: 0;
+  }
+}
+
+img {
+  height: 10rem;
+  object-fit: contain;
+  align-self: center;
+}
+
+.card-body-section {
+  ul {
+    margin-left: 0.5rem;
+  }
+  h6 {
+    text-decoration: underline;
+  }
+  a {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.row-structure {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+
+  .date {
+    color: $white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    margin-bottom: 0;
+    width: 17.333%;
+  }
+
+  svg {
+    margin-left: 0;
+  }
+}
+
+.flex-row {
+  display: flex;
+}
+
+@media only screen and (max-width: 1050px) {
+  .row-structure {
+    margin-bottom: inherit;
+  }
+  .hide-on-mobile {
+    display: none;
+  }
+  img {
+    height: 5rem;
+    padding-bottom: 1rem;
+  }
+  .flex-row {
+    display: block;
+  }
+}

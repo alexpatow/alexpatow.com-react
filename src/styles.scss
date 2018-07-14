@@ -1,0 +1,79 @@
+@import '../node_modules/normalize-scss/sass/normalize/import-now'; // import normalize-scss
+@import '../node_modules/skeleton-sass-official/skeleton/core/config'; // Skeleton Sass core loader
+
+// import default theme variables
+@import 'variables'; // theme variable overrides
+
+// import default theme styles
+@import '../node_modules/skeleton-sass-official/skeleton/themes/fresh/include_components'; // theme base styles
+@import '../node_modules/skeleton-sass-official/skeleton/themes/fresh/grid'; // theme grid styles
+
+@import '../node_modules/sweetalert2/dist/sweetalert2';
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+// Section Heading
+h2 {
+  font-weight: 200;
+}
+
+p,
+a,
+em,
+strong,
+li {
+  font-family: 'Open Sans', sans-serif;
+}
+
+// Color Variables
+$elephant: #112f41;
+$elf-green: #068587;
+$tradewind: #4fb99f;
+$saffron: #f2b134;
+$flamingo: #ed553b;
+$white: #ffffff;
+$lighter-gray: #d1d1d1;
+$light-gray: #cccccc;
+$dark-gray: #888888;
+
+// As Button Utility
+.as-button:active,
+.as-button:focus,
+.as-button.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+//Utilities
+.u-center-text {
+  text-align: center;
+}
+
+.u-center-elements {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.u-vertically-center-elements {
+  display: flex;
+  align-items: center;
+}
+
+// Fix of sweetmodal
+.swal2-confirm.swal2-styled {
+  padding-top: 0;
+  padding-bottom: 0;
+}

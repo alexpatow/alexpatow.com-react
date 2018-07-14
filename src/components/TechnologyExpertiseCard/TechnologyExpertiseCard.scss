@@ -1,0 +1,77 @@
+@import "../../styles.scss";
+
+.card-container {
+  background-color: $white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.33rem;
+  margin-bottom: 1.0rem;
+  padding: 2rem;
+}
+
+.card-container:hover {
+  margin-bottom: 1.5rem;
+  margin-top: -.5rem;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 24px 0 rgba(0, 0, 0, 0.19);
+  transition-duration: .5s;
+  transition-property: margin, box-shadow;
+  transition-timing-function: cubic-bezier(0, 1, .5, 1);
+  .card-header {
+    h5,
+    h6 {
+      color: $elf-green;
+    }
+  }
+
+  button {
+    border-color: $elf-green;
+    color: $elf-green;
+    transition-duration: .5s;
+    transition-property: color, border-color;
+    transition-timing-function: cubic-bezier(0, 1, .5, 1);
+  }
+}
+
+.card-header {
+  h5 {
+    line-height: 1;
+    margin-bottom: 1rem;
+    color: $elephant;
+    font-size: 2rem;
+  }
+}
+
+.card-line {
+  color: $light-gray;
+  line-height: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-body {
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+.card-button-container {
+  margin-bottom: 0;
+  button {
+    margin-bottom: 0;
+  }
+}
+
+.card-button-container svg {
+  margin-left: .5rem;
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .card-button-container {
+    margin-bottom: 1rem;
+    button {
+      margin-bottom: 1rem;
+    }
+    button:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

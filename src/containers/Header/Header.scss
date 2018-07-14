@@ -1,0 +1,47 @@
+@import '../../styles.scss';
+
+header .nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  color: $white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+nav button {
+  color: $white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  border: 0;
+  border-radius: 0;
+  border-bottom: 0.33rem solid transparent;
+  margin-bottom: 0;
+  font-size: 1.3rem;
+
+  svg {
+    margin-left: .5rem;
+  }
+}
+
+nav button:hover,
+nav button:focus {
+  border-color: $white;
+  color: $white;
+  transition-property: border-color, color;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+@media only screen and (max-width: $tablet-width) {
+  header .nav-flex {
+    justify-content: center;
+  }
+  nav > button {
+    width: 100%;
+  }
+}

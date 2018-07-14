@@ -1,0 +1,36 @@
+@import './styles.scss';
+
+.gradient-container {
+  background: $elephant; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    $elephant,
+    $tradewind
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    $elephant,
+    $tradewind
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.header-container {
+  padding-top: 10rem;
+}
+
+.section-container {
+  padding-top: 5rem;
+}
+
+body {
+  padding-bottom: 2rem;
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .header-container {
+    padding-top: 10rem;
+  }
+  .section-container {
+    padding-top: 5rem;
+  }
+}

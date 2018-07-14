@@ -1,0 +1,13 @@
+.technology-image-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+img {
+  cursor: pointer;
+  height: 15rem;
+  object-fit: contain;
+  width: 16.66%;
+}
