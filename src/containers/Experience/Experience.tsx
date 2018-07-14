@@ -16,9 +16,11 @@ export const Experience = () => {
   });
   return (
     <div>
-      <h2 className="experiences" id="experience">
-        Experience
-      </h2>
+      <div className="row" id="experience">
+        <div className="twelve columns">
+          <h2 className="experiences">Experience</h2>
+        </div>
+      </div>
       {experienceCards}
     </div>
   );

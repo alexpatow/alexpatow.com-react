@@ -1,3 +1,5 @@
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 
 import Experience, { default as IExperience } from '../../typings/experience';
@@ -75,16 +77,26 @@ export class ExperienceCard extends React.Component<IProps, IState> {
               <img
                 className="three columns"
                 src={this.experience.imagePath}
+                alt={`${this.experience.title} logo`}
                 aria-label={`opens ${this.experience.companyLink}`}
+                onClick={() => {
+                  this.handleClickToOpenCompanyPage();
+                }}
               />
               <div className="nine columns">
                 <div
                   className="card-header"
                   aria-label={`opens ${this.experience.companyLink}`}
+                  onClick={() => {
+                    this.handleClickToOpenCompanyPage();
+                  }}
                 >
                   <h5>
                     {this.experience.title}
-                    <i className="fa fa-external-link" aria-hidden="true" />
+                    <FontAwesomeIcon
+                      icon={faExternalLinkAlt}
+                      style={{ opacity: this.state.hoverActive ? 1 : 0 }}
+                    />
                   </h5>
                   <h6>{this.experience.subtitle}</h6>
                 </div>
@@ -101,5 +113,9 @@ export class ExperienceCard extends React.Component<IProps, IState> {
         </div>
       </div>
     );
+  }
+
+  private handleClickToOpenCompanyPage() {
+    window.open(this.experience.companyLink);
   }
 }

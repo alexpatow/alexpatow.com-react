@@ -35,6 +35,8 @@
 }
 
 .experience-card .card-header {
+  cursor: pointer;
+
   h5,
   h5 {
     line-height: 1;
@@ -101,7 +103,7 @@
   }
 
   svg {
-    margin-left: 0;
+    margin-left: 1rem;
   }
 }
 
