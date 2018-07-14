@@ -5,6 +5,21 @@ import * as React from 'react';
 
 import './Header.css';
 
+function goToElement(id: string): void {
+  const element: HTMLElement = document.getElementById(id)!;
+  element.scrollIntoView({
+    behavior: 'smooth',
+  });
+}
+
+function goToGithub(): void {
+  window.open('https://github.com/alexpatow');
+}
+
+function goToResume(): void {
+  window.open('/assets/AlexPatowResume.pdf');
+}
+
 export const Header = ({}) => {
   return (
     <header className="row">
@@ -15,13 +30,41 @@ export const Header = ({}) => {
       </div>
       <nav className="nav-flex twelve columns">
         <div className="button-group">
-          <button aria-label="scroll to experience section">Experience</button>
-          <button aria-label="scroll to projects section">Projects</button>
-          <button aria-label="open https://github.com/alexpatow">
-            GitHub
-            <FontAwesomeIcon icon={faGithub}/>
+          <button
+            aria-label="scroll to experience section"
+            // tslint:disable-next-line
+            onClick={() => {
+              goToElement('experience');
+            }}
+          >
+            Experience
           </button>
-          <button aria-label="open resume">
+          <button
+            aria-label="scroll to projects section"
+            // tslint:disable-next-line
+            onClick={() => {
+              goToElement('projects');
+            }}
+          >
+            Projects
+          </button>
+          <button
+            aria-label="open https://github.com/alexpatow"
+            // tslint:disable-next-line
+            onClick={() => {
+              goToGithub();
+            }}
+          >
+            GitHub
+            <FontAwesomeIcon icon={faGithub} />
+          </button>
+          <button
+            aria-label="open resume"
+            // tslint:disable-next-line
+            onClick={() => {
+              goToResume();
+            }}
+          >
             Résumé
             <FontAwesomeIcon icon={faExternalLinkAlt} />
           </button>

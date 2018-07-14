@@ -27,7 +27,7 @@ export const Projects = () => {
   );
 
   return (
-    <div>
+    <div id="projects">
       <div className="row">
         <div className="twelve columns">
           <h2>Projects</h2>
