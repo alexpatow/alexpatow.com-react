@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { ProjectCard } from '../../components/ProjectCard/ProjectCard';
 import { projects } from '../../data/projects';
-import IProject from '../../typings/project';
+import IProject from '../../typings/IProject';
 import './Projects.css';
 
 export const Projects = () => {

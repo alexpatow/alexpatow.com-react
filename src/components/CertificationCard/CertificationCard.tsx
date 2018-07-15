@@ -5,7 +5,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 
-import ICertification from '../../typings/certification';
+import ICertification from '../../typings/ICertification';
 import './CertificationCard.css';
 
 interface IProps {

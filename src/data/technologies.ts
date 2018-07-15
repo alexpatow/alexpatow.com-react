@@ -1,4 +1,4 @@
-import Technology from '../typings/technology';
+import Technology from '../typings/ITechnology';
 
 export const technologies: Technology[] = [
   {

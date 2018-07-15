@@ -3,7 +3,7 @@ import * as React from 'react';
 import { ExperienceCard } from '../../components/ExperienceCard/ExperienceCard';
 import { ExperienceDetail } from '../../components/ExperienceDetail/ExperienceDetail';
 import { experiences } from '../../data/experiences';
-import IExperience from '../../typings/experience';
+import IExperience from '../../typings/IExperience';
 import './Experience.css';
 
 interface IState {

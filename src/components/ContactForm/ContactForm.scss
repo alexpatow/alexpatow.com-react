@@ -1,6 +1,6 @@
 @import "../../styles.scss";
 
-.contact-form .disabled {
+.contact-form button:disabled {
   cursor: not-allowed;
   border-color: $lighter-gray !important;
   color: $lighter-gray !important;

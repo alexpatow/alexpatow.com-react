@@ -2,7 +2,7 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 
-import ITechnology from '../../typings/technology';
+import ITechnology from '../../typings/ITechnology';
 import './TechnologyExpertiseCard.css';
 
 interface IProps {

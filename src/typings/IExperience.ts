@@ -1,4 +1,4 @@
-import IBody from './body';
+import IBody from './IBody';
 
 export default interface IExperience {
   id: string;

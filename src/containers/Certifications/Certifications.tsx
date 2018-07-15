@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { CertificationCard } from '../../components/CertificationCard/CertificationCard';
 import { certifications } from '../../data/certifications';
-import Certification from '../../typings/certification';
+import Certification from '../../typings/ICertification';
 import './Certifications.css';
 
 export const Certifications = () => {

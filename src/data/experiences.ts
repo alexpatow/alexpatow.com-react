@@ -1,4 +1,4 @@
-import Experience from '../typings/experience';
+import Experience from '../typings/IExperience';
 
 export const experiences: Experience[] = [
   {

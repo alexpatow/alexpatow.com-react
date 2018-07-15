@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { TechnologyExpertiseCard } from '../../components/TechnologyExpertiseCard/TechnologyExpertiseCard';
 
-
 import { TechnologyExpertiseImages } from '../../components/TechnologyExpertiseImages/TechnologyExpertiseImages';
 import { technologies } from '../../data/technologies';
-import ITechnology from '../../typings/technology';
+import ITechnology from '../../typings/ITechnology';
 import './TechnologyExpertise.css';
 
 interface IState {
@@ -12,7 +11,6 @@ interface IState {
 }
 
 export class TechnologyExpertise extends React.Component<{}, IState> {
-
   constructor(props: {}) {
     super(props);
     this.state = {
@@ -38,9 +36,10 @@ export class TechnologyExpertise extends React.Component<{}, IState> {
         </div>
         <div className="row">
           <div className="twelve columns">
-            <TechnologyExpertiseCard technology={this.state.selectedTechnology} />
+            <TechnologyExpertiseCard
+              technology={this.state.selectedTechnology}
+            />
           </div>
-
         </div>
       </div>
     );
@@ -48,7 +47,7 @@ export class TechnologyExpertise extends React.Component<{}, IState> {
 
   private handleTechnologyClicked = (technology: ITechnology): void => {
     this.setState({
-      selectedTechnology: technology
-    })
-  }
+      selectedTechnology: technology,
+    });
+  };
 }

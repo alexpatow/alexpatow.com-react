@@ -1,4 +1,4 @@
-import Certification from '../typings/certification';
+import Certification from '../typings/ICertification';
 
 export const certifications: Certification[] = [
   {

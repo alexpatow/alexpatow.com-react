@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import ITechnology from '../../typings/technology';
+import ITechnology from '../../typings/ITechnology';
 import './TechnologyExpertiseImages.css';
 
 interface IProps {
