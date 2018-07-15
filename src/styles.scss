@@ -72,8 +72,19 @@ $dark-gray: #888888;
   align-items: center;
 }
 
-// Fix of sweetmodal
-.swal2-confirm.swal2-styled {
-  padding-top: 0;
-  padding-bottom: 0;
+@media only screen and (max-width: 1050px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+.card-header h5:hover,
+.card-header svg:hover {
+  color: $elf-green;
+  cursor: pointer;
+}
+
+button:hover {
+  color: $elf-green;
+  border-color: $elf-green;
 }

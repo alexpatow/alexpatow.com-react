@@ -1,28 +1,5 @@
 @import '../../styles.scss';
 
-.experience-card .card-container:hover {
-  margin-bottom: 1.5rem;
-  margin-top: -0.5rem;
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 24px 0 rgba(0, 0, 0, 0.19);
-  transition-duration: 0.5s;
-  transition-property: margin, box-shadow;
-  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-  .card-header {
-    h5,
-    h6 {
-      color: $elf-green;
-    }
-  }
-
-  button {
-    border-color: $elf-green;
-    color: $elf-green;
-    transition-duration: 0.5s;
-    transition-property: color, border-color;
-    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-  }
-}
-
 .experience-card .card-container {
   background-color: $white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -35,11 +12,16 @@
 }
 
 .experience-card .card-header {
-  h5,
+  cursor: pointer;
+
   h5 {
     line-height: 1;
     margin-bottom: 1rem;
     color: $elephant;
+  }
+
+  h6 {
+    margin-bottom: 0;
   }
 }
 
@@ -101,7 +83,7 @@
   }
 
   svg {
-    margin-left: 0;
+    margin-left: 1rem;
   }
 }
 
@@ -112,9 +94,6 @@
 @media only screen and (max-width: 1050px) {
   .experience-card .row-structure {
     margin-bottom: inherit;
-  }
-  .experience-card .hide-on-mobile {
-    display: none;
   }
   .experience-card img {
     height: 5rem;
