@@ -3,7 +3,7 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 
-import IProject from '../../typings/project';
+import IProject from '../../typings/IProject';
 import './ProjectCard.css';
 
 interface IProps {

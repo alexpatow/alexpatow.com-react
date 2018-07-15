@@ -2,7 +2,7 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 
-import IExperience from '../../typings/experience';
+import IExperience from '../../typings/IExperience';
 import './ExperienceDetail.css';
 
 interface IProps {

@@ -1,4 +1,4 @@
-import IProject from '../typings/project';
+import IProject from '../typings/IProject';
 
 export const projects: IProject[] = [
   {

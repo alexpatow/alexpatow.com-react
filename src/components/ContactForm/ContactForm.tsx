@@ -1,38 +1,35 @@
 import * as React from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
+import IContactFormData from '../../typings/IContactFormData';
 import './ContactForm.css';
+import { handleContactFromSubmission } from './handleContactFormSubmission';
 
-interface IState {
-  name: string;
-  email: string;
-  message: string;
-}
-
-export class ContactForm extends React.Component<{}, Partial<IState>> {
-
+export class ContactForm extends React.Component<
+  {},
+  Partial<IContactFormData>
+> {
+  private captcha: ReCAPTCHA;
   constructor(props: {}) {
     super(props);
     this.state = {
       name: '',
       email: '',
-      message: ''
+      message: '',
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // TODO: Add captcha code
-  // <re-captcha *ngIf="contactForm.valid"
-  // className="offset-by-three six columns"
-  // siteKey="6LekLS8UAAAAAIU3ACtG_eveg7ozNXpsbyn-iWQJ"
-  // size="invisible"
-  // aria-hidden="true"
-  // ></re-captcha>
-
   public render() {
+    const isSubmitButtonDisabled = () => {
+      const values = Object.keys(this.state).map(key => this.state[key]);
+      return values.some(value => !value || value === '');
+    };
+
     return (
-      <form onSubmit={this.handleSubmit} className="contact-form">
+      <form className="contact-form">
         <div className="row">
           <div className="six columns">
             <label htmlFor="name">Name:</label>
@@ -73,15 +70,34 @@ export class ContactForm extends React.Component<{}, Partial<IState>> {
           </div>
         </div>
         <div className="row">
-          <button type="submit" value="Submit" className="offset-by-four four columns">
+          <button
+            className="offset-by-four four columns"
+            onClick={() => {
+              this.handleSubmit();
+            }}
+            disabled={isSubmitButtonDisabled()}
+          >
             Send Email
           </button>
         </div>
+        <ReCAPTCHA
+          ref={(el: ReCAPTCHA) => {
+            this.captcha = el;
+          }}
+          sitekey="6LekLS8UAAAAAIU3ACtG_eveg7ozNXpsbyn-iWQJ"
+          size="invisible"
+          aria-hidden="true"
+          onChange={this.onReCAPTCHAChange.bind(this)} // tslint:disable-line
+        />
       </form>
-    )
+    );
   }
 
-  private handleInputChange(event: React.FormEvent<HTMLInputElement> | React.FormEvent<HTMLTextAreaElement>) {
+  private handleInputChange(
+    event:
+      | React.FormEvent<HTMLInputElement>
+      | React.FormEvent<HTMLTextAreaElement>
+  ) {
     const target = event.currentTarget;
     const value = target.value;
     const id = target.id;
@@ -91,8 +107,21 @@ export class ContactForm extends React.Component<{}, Partial<IState>> {
     });
   }
 
-  private handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    // TODO: Add form submission logic
-    event.preventDefault();
+  private onReCAPTCHAChange(value: string) {
+    console.log('Captcha value:', value); //tslint:disable-line
+    this.setState({
+      recaptchaToken: value,
+    });
+  }
+
+  private async handleSubmit() {
+    console.log('handleSubmit'); //tslint:disable-line
+
+    try {
+      this.captcha.execute();
+      await handleContactFromSubmission(this.state as IContactFormData);
+    } catch (err) {
+      console.error(err); // tslint:disable-line
+    }
   }
 }
