@@ -27,9 +27,7 @@ export const Header = ({}) => {
         <h1 className="as-button" aria-label="return to home">
           Alex Patow
         </h1>
-      </div>
-      <nav className="nav-flex twelve columns">
-        <div className="button-group">
+        <nav className="button-group">
           <button
             aria-label="scroll to experience section"
             onClick={() => {
@@ -64,8 +62,8 @@ export const Header = ({}) => {
             Résumé
             <FontAwesomeIcon icon={faExternalLinkAlt} />
           </button>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 };

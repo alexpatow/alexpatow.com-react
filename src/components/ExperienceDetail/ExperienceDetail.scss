@@ -1,0 +1,56 @@
+.row-structure.experience-detail {
+  margin-bottom: 0;
+
+  .card-container {
+    margin-bottom: 0;
+  }
+
+  .line-spacing {
+    margin-left: 0.5rem;
+    margin-bottom: 0;
+    width: 17.333%;
+    height: 20px;
+  }
+
+  svg {
+    margin-left: 1rem;
+  }
+}
+
+.card-header h6 {
+  margin-bottom: 0;
+}
+
+ul.experience-detail-bullets {
+  margin-bottom: 1rem;
+}
+
+.experience-detail-section {
+  margin-bottom: 2rem;
+}
+
+.experience-detail-section:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.experience-detail-section > .section-heading {
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 1050px) {
+  .experience-detail .row-structure {
+    margin-bottom: inherit;
+  }
+
+  .row-structure.experience-detail .card-container {
+    margin-bottom: 1rem;
+  }
+
+  .experience-detail img {
+    height: 5rem;
+    padding-bottom: 1rem;
+  }
+  .experience-detail .flex-row {
+    display: block;
+  }
+}

@@ -2,12 +2,13 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 
-import Experience, { default as IExperience } from '../../typings/experience';
+import IExperience from '../../typings/experience';
 import './ExperienceCard.css';
 
 interface IProps {
-  experience: Experience;
+  experience: IExperience;
   lastCard: boolean;
+  handleShowMorePressed: (experience: IExperience) => void;
 }
 
 interface IState {
@@ -29,7 +30,10 @@ export class ExperienceCard extends React.Component<IProps, IState> {
 
   public render() {
     return (
-      <div className="row row-structure experience-card">
+      <div
+        className="row row-structure experience-card"
+        id={this.experience.id}
+      >
         <h6
           className="u-full-width two columns date hide-on-mobile"
           style={{ opacity: this.state.hoverActive ? 1 : 0 }}
@@ -103,7 +107,12 @@ export class ExperienceCard extends React.Component<IProps, IState> {
                 <hr className="card-line" />
                 <div className="card-body">{this.experience.intro}</div>
                 <div className="row card-button-container">
-                  <button className="offset-by-three six columns">
+                  <button
+                    className="offset-by-three six columns"
+                    onClick={() => {
+                      this.props.handleShowMorePressed(this.experience);
+                    }}
+                  >
                     Show More
                   </button>
                 </div>

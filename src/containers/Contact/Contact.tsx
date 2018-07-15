@@ -11,12 +11,16 @@ export const Contact = () => {
           <h2>Contact</h2>
         </div>
       </div>
-      <ContactForm/>
+      <ContactForm />
       <div className="row">
         <div className="twelve columns">
-          <p className="u-center-text">Powered By AWS Lambda |
-            <a href="https://github.com/alexpatow/lambda-contact-form"
-               aria-label="opens https://github.com/alexpatow/lambda-contact-form" target="_blank">
+          <p className="u-center-text">
+            Powered By AWS Lambda |{' '}
+            <a
+              href="https://github.com/alexpatow/lambda-contact-form"
+              aria-label="opens https://github.com/alexpatow/lambda-contact-form"
+              target="_blank"
+            >
               https://github.com/alexpatow/lambda-contact-form
             </a>
           </p>
