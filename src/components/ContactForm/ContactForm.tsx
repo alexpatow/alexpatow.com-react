@@ -80,15 +80,19 @@ export class ContactForm extends React.Component<
             Send Email
           </button>
         </div>
-        <ReCAPTCHA
-          ref={(el: ReCAPTCHA) => {
-            this.captcha = el;
-          }}
-          sitekey="6LekLS8UAAAAAIU3ACtG_eveg7ozNXpsbyn-iWQJ"
-          size="invisible"
-          aria-hidden="true"
-          onChange={this.onReCAPTCHAChange.bind(this)} // tslint:disable-line
-        />
+        {isSubmitButtonDisabled() ? (
+          ''
+        ) : (
+          <ReCAPTCHA
+            ref={(el: ReCAPTCHA) => {
+              this.captcha = el;
+            }}
+            sitekey="6LekLS8UAAAAAIU3ACtG_eveg7ozNXpsbyn-iWQJ"
+            size="invisible"
+            aria-hidden="true"
+            onChange={this.onReCAPTCHAChange.bind(this)} // tslint:disable-line
+          />
+        )}
       </form>
     );
   }
