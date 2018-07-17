@@ -11,7 +11,8 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-google-recaptcha": "^0.12.0",
-    "react-scripts-ts": "2.16.0"
+    "react-scripts-ts": "2.16.0",
+    "sweetalert2-react": "^0.7.2"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
