@@ -1,14 +1,20 @@
 import * as React from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 
-import IContactFormData from '../../typings/IContactFormData';
 import './ContactForm.css';
+import { ErrorAlert } from './ErrorAlert';
 import { handleContactFromSubmission } from './handleContactFormSubmission';
+import { SuccessAlert } from './SuccessAlert';
 
-export class ContactForm extends React.Component<
-  {},
-  Partial<IContactFormData>
-> {
+interface IState {
+  name: string;
+  email: string;
+  body: string;
+  showSuccessAlert: boolean;
+  showErrorAlert: boolean;
+}
+
+export class ContactForm extends React.Component<{}, IState> {
   private captcha: ReCAPTCHA;
   constructor(props: {}) {
     super(props);
@@ -16,20 +22,21 @@ export class ContactForm extends React.Component<
       name: '',
       email: '',
       body: '',
+      showSuccessAlert: false,
+      showErrorAlert: false,
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  public componentDidMount() {
-    this.captcha.execute();
-  }
-
   public render() {
     const isSubmitButtonDisabled = () => {
-      const values = Object.keys(this.state).map(key => this.state[key]);
-      return values.some(value => !value || value === '');
+      return (
+        this.state.email === '' ||
+        this.state.body === '' ||
+        this.state.name === ''
+      );
     };
 
     return (
@@ -95,8 +102,27 @@ export class ContactForm extends React.Component<
             onChange={this.onReCAPTCHAChange.bind(this)} // tslint:disable-line
           />
         </div>
+        <SuccessAlert
+          show={this.state.showSuccessAlert}
+          handleClose={() => {
+            this.handleAlertClose();
+          }}
+        />
+        <ErrorAlert
+          show={this.state.showErrorAlert}
+          handleClose={() => {
+            this.handleAlertClose();
+          }}
+        />
       </form>
     );
+  }
+
+  private handleAlertClose() {
+    this.setState({
+      showSuccessAlert: false,
+      showErrorAlert: false,
+    });
   }
 
   private handleInputChange(
@@ -107,29 +133,37 @@ export class ContactForm extends React.Component<
     const target = event.currentTarget;
     const value = target.value;
     const id = target.id;
+    const updatedState = {};
+    updatedState[id] = value;
 
-    this.setState({
-      [id]: value,
-    });
-  }
-
-  private onReCAPTCHAChange(value: string) {
-    this.setState({
-      recaptchaToken: value,
-    });
+    this.setState(updatedState);
   }
 
   private async handleSubmit(event: React.FormEvent) {
     // prevents form submission from reloading the page.
     event.preventDefault();
     try {
-      await handleContactFromSubmission(this.state as IContactFormData);
-      window.alert('Success!');
+      this.captcha.execute();
     } catch (err) {
       console.error(err); // tslint:disable-line
-      window.alert(
-        'Message failed to send, please email me at: alexpatow@alexpatow.com'
-      );
+      this.setState({
+        showErrorAlert: true,
+      });
     }
+  }
+
+  private async onReCAPTCHAChange(recaptchaToken: string) {
+    await handleContactFromSubmission({
+      recaptchaToken,
+      name: this.state.name,
+      email: this.state.email,
+      body: this.state.body,
+    });
+    this.setState({
+      showSuccessAlert: true,
+      name: '',
+      email: '',
+      body: '',
+    });
   }
 }

@@ -33,21 +33,7 @@ export class Experience extends React.Component<{}, IState> {
                 experienceShowingMore: null,
               });
 
-              // tslint:disable-next-line
-              console.log('scrolling to: ', id);
-
-              // const element: HTMLElement = document.getElementById(id)!;
-              // element.scrollIntoView({
-              //   behavior: 'smooth',
-              //   block: 'start',
-              //   inline: 'start',
-              // });
-
               const element: HTMLElement = document.getElementById(id)!;
-              console.log(element.parentElement); // tslint:disable-line
-              console.log(element.parentNode); // tslint:disable-line
-              // tslint:disable-next-line
-              console.log(element.offsetTop - element.parentElement!.offsetTop);
               element.parentElement!.scrollTop =
                 element.offsetTop - element.parentElement!.offsetTop;
             }}
@@ -63,9 +49,6 @@ export class Experience extends React.Component<{}, IState> {
             this.setState({
               experienceShowingMore: showMoreExperience,
             });
-
-            // tslint:disable-next-line
-            console.log('scrolling to: ', showMoreExperience.id);
 
             const element: HTMLElement = document.getElementById(
               showMoreExperience.id
