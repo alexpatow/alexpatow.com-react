@@ -15,11 +15,15 @@ export class ContactForm extends React.Component<
     this.state = {
       name: '',
       email: '',
-      message: '',
+      body: '',
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  public componentDidMount() {
+    this.captcha.execute();
   }
 
   public render() {
@@ -58,9 +62,9 @@ export class ContactForm extends React.Component<
         </div>
         <div className="row">
           <div className="twelve columns">
-            <label htmlFor="message">Message:</label>
+            <label htmlFor="body">Message:</label>
             <textarea
-              id="message"
+              id="body"
               className="u-full-width"
               placeholder="Hi there!"
               aria-required={true}
@@ -72,17 +76,15 @@ export class ContactForm extends React.Component<
         <div className="row">
           <button
             className="offset-by-four four columns"
-            onClick={() => {
-              this.handleSubmit();
+            onClick={event => {
+              this.handleSubmit(event);
             }}
             disabled={isSubmitButtonDisabled()}
           >
             Send Email
           </button>
         </div>
-        {isSubmitButtonDisabled() ? (
-          ''
-        ) : (
+        <div style={{ display: isSubmitButtonDisabled() ? 'none' : 'block' }}>
           <ReCAPTCHA
             ref={(el: ReCAPTCHA) => {
               this.captcha = el;
@@ -92,7 +94,7 @@ export class ContactForm extends React.Component<
             aria-hidden="true"
             onChange={this.onReCAPTCHAChange.bind(this)} // tslint:disable-line
           />
-        )}
+        </div>
       </form>
     );
   }
@@ -112,20 +114,22 @@ export class ContactForm extends React.Component<
   }
 
   private onReCAPTCHAChange(value: string) {
-    console.log('Captcha value:', value); //tslint:disable-line
     this.setState({
       recaptchaToken: value,
     });
   }
 
-  private async handleSubmit() {
-    console.log('handleSubmit'); //tslint:disable-line
-
+  private async handleSubmit(event: React.FormEvent) {
+    // prevents form submission from reloading the page.
+    event.preventDefault();
     try {
-      this.captcha.execute();
       await handleContactFromSubmission(this.state as IContactFormData);
+      window.alert('Success!');
     } catch (err) {
       console.error(err); // tslint:disable-line
+      window.alert(
+        'Message failed to send, please email me at: alexpatow@alexpatow.com'
+      );
     }
   }
 }

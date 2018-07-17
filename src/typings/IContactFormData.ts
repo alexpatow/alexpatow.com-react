@@ -1,6 +1,6 @@
 export default interface IContactFormData {
-  name: string;
+  body: string;
   email: string;
-  message: string;
+  name: string;
   recaptchaToken: string;
 }
