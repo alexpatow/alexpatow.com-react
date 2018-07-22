@@ -9,9 +9,10 @@ before_deploy:
 - pip install --user awscli
 deploy:
   provider: script
-  script: ~/.local/bin/aws s3 sync build s3://$AWS_S3_BUCKET --region=us-west-2 --delete
+  script: ~/.local/bin/aws s3 sync build $AWS_S3_BUCKET --region=us-west-2 --delete
   skip_cleanup: true
   on:
     branch: master
 after_deploy:
-- travis-ci-cloudfront-invalidation -a $AWS_ACCESS_KEY -s $AWS_SECRET_KEY -c $AWS_CLOUDFRONT_DIST_ID -i '/*' -b $TRAVIS_BRANCH -p $TRAVIS_PULL_REQUEST
+- travis-ci-cloudfront-invalidation -a $AWS_ACCESS_KEY_ID -s $AWS_SECRET_ACCESS_KEY -c
+$AWS_CLOUDFRONT_DIST_ID -i '/*' -b $TRAVIS_BRANCH -p $TRAVIS_PULL_REQUEST
