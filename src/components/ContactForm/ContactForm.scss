@@ -1,5 +1,10 @@
 @import "../../styles.scss";
 
+.contact-form__button:hover {
+  color: $elf-green;
+  border-color: $elf-green;
+}
+
 .contact-form__button:disabled {
   cursor: not-allowed;
   border-color: $lighter-gray !important;
