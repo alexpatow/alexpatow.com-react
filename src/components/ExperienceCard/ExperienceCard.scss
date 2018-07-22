@@ -15,9 +15,9 @@
   width: 17.333%;
 }
 
-.row.row--experience-card {
+.row--experience-card {
   display: flex;
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .card--experience {
