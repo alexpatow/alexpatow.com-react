@@ -9,10 +9,6 @@ interface IProps {
   sectionHeader: string;
 }
 
-function titleCase(word: string): string {
-  return word.replace(word[0], word[0].toUpperCase());
-}
-
 function getColumnClass(length: number): string {
   switch (length) {
     case 0:
@@ -47,7 +43,7 @@ export const TechnologyExpertiseSection = ({
   return (
     <div className="row">
       <div className="twelve columns">
-        <h4>{titleCase(sectionHeader)}</h4>
+        <h4 className="u-capitalize">{sectionHeader}</h4>
       </div>
       {technologyList}
     </div>
