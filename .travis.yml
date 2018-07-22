@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - '8'
 install:
-- npm install -g travis-ci-cloudfront-invalidation yarn
+- npm install -g travis-ci-cloudfront-invalidation
 - yarn install
 before_deploy:
 - yarn build

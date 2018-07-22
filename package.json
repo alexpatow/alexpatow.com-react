@@ -21,7 +21,9 @@
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts-ts build",
     "build": "npm-run-all build-css build-js",
-    "test": "react-scripts-ts test --env=jsdom",
+    "test": "npm-run-all build-css test-script",
+    "test-script": "react-scripts-ts test --env=jsdom",
+    "test-local": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
