@@ -7,7 +7,6 @@ export const Footer = () => {
 
   return (
     <footer className="row">
-      <div className="twelve columns u-center-elements">
       <div className="four columns footer-text-left">
         <span>© Alex Patow {year}</span>
       </div>
