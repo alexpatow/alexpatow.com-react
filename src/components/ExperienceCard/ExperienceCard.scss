@@ -1,105 +1,51 @@
 @import '../../styles.scss';
 
-.experience-card .card-container {
-  background-color: $white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 0.33rem;
-  margin-bottom: 1rem;
-  padding: 2rem;
-  .row {
-    margin-bottom: 0;
-  }
-}
-
-.experience-card .card-header {
-  cursor: pointer;
-
-  h5 {
-    line-height: 1;
-    margin-bottom: 1rem;
-    color: $elephant;
-  }
-
-  h6 {
-    margin-bottom: 0;
-  }
-}
-
-.experience-card .card-line {
-  color: $light-gray;
-  line-height: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.experience-card .card-body {
-  margin-bottom: 1rem;
-  p {
-    margin-bottom: 0;
-  }
-}
-
-.experience-card .card-body.expanded {
-  height: 100%;
-}
-
-.experience-card .card-button-container {
-  margin-bottom: 0;
-  button {
-    margin-bottom: 0;
-  }
-}
-
-.experience-card img {
-  height: 10rem;
-  object-fit: contain;
-  align-self: center;
-}
-
-.experience-card .card-body-section {
-  ul {
-    margin-left: 0.5rem;
-  }
-  h6 {
-    text-decoration: underline;
-  }
-  a {
-    margin-bottom: 2.5rem;
-  }
-}
-
-.row-structure.experience-card  {
+.row.experience-section {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0;
-
-  .date {
-    color: $white;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
-    margin-bottom: 0;
-    width: 17.333%;
-  }
-
-  svg {
-    margin-left: 1rem;
-  }
 }
 
-.experience-card .flex-row {
+.experience-section__date {
+  color: $white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  margin-bottom: 0;
+  width: 17.333%;
+}
+
+.row.row--experience-card {
   display: flex;
+  margin-bottom: 0;
+}
+
+.card--experience {
+  margin-bottom: 1rem;
+  padding: 2rem;
+}
+
+.card--experience img {
+  height: 10rem;
+  object-fit: contain;
+  align-self: center;
+}
+
+.card--experience .card__body {
+  margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 1050px) {
-  .experience-card .row-structure {
+  .row.experience-section {
     margin-bottom: inherit;
   }
-  .experience-card img {
+
+  .card--experience img {
     height: 5rem;
     padding-bottom: 1rem;
   }
-  .experience-card .flex-row {
+
+  .row--experience-card {
     display: block;
   }
 }

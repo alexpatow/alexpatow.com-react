@@ -23,12 +23,13 @@ function goToResume(): void {
 export const Header = ({}) => {
   return (
     <header className="row">
-      <div className="nav-flex twelve columns">
-        <h1 className="as-button" aria-label="return to home">
+      <div className="twelve columns nav">
+        <h1 className="as-button nav__header" aria-label="return to home">
           Alex Patow
         </h1>
-        <nav className="button-group">
+        <nav className="nav__button-group">
           <button
+            className="nav__button"
             aria-label="scroll to experience section"
             onClick={() => {
               goToElement('experience');
@@ -37,6 +38,7 @@ export const Header = ({}) => {
             Experience
           </button>
           <button
+            className="nav__button"
             aria-label="scroll to projects section"
             onClick={() => {
               goToElement('projects');
@@ -45,22 +47,24 @@ export const Header = ({}) => {
             Projects
           </button>
           <button
+            className="nav__button"
             aria-label="open https://github.com/alexpatow"
             onClick={() => {
               goToGithub();
             }}
           >
             GitHub
-            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon className="nav__icon" icon={faGithub} />
           </button>
           <button
+            className="nav__button"
             aria-label="open resume"
             onClick={() => {
               goToResume();
             }}
           >
             Résumé
-            <FontAwesomeIcon icon={faExternalLinkAlt} />
+            <FontAwesomeIcon className="nav__icon" icon={faExternalLinkAlt} />
           </button>
         </nav>
       </div>

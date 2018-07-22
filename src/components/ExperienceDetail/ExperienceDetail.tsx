@@ -31,11 +31,11 @@ export function ExperienceDetail({
         id={experience.id}
       >
         {body.heading ? (
-          <h5 className="section-heading">{body.heading}</h5>
+          <h5 className="experience-detail-section__heading">{body.heading}</h5>
         ) : (
           ''
         )}
-        <ul className="experience-detail-bullets">{bullets}</ul>
+        <ul className="experience-detail-section__bullets">{bullets}</ul>
         {body.additionalInfoLink ? (
           <a
             aria-label={`opens ${body.additionalInfoLink}`}
@@ -51,30 +51,33 @@ export function ExperienceDetail({
     );
   });
   return (
-    <div className="row row-structure experience-detail">
+    <div className="row experience-detail">
       <div className="twelve columns">
-        <div className="card-container">
+        <div className="card card--experience-detail">
           <div
-            className="card-header"
+            className="card__header"
             aria-label={`opens ${experience.companyLink}`}
             onClick={() => {
               handleClickToOpenCompanyPage(experience.companyLink);
             }}
           >
-            <h5>
+            <h5 className="card__title">
               {experience.title}
-              <FontAwesomeIcon icon={faExternalLinkAlt} />
+              <FontAwesomeIcon
+                className="card__icon"
+                icon={faExternalLinkAlt}
+              />
             </h5>
-            <h6>{experience.subtitle}</h6>
-            <h6>{experience.datestring}</h6>
+            <h6 className="card__subtitle">{experience.subtitle}</h6>
+            <p className="card__year">{experience.datestring}</p>
           </div>
-          <hr className="card-line" />
-          <div className="card-body">{experience.intro}</div>
-          <hr className="card-line" />
-          <div className="row card-more-info">{details}</div>
-          <div className="row card-button-container">
+          <hr className="card__line" />
+          <div className="card__body">{experience.intro}</div>
+          <hr className="card__line" />
+          <div className="card__more-info">{details}</div>
+          <div className="row card__button-container">
             <button
-              className="offset-by-four four columns"
+              className="offset-by-four four columns card__button"
               onClick={() => {
                 handleShowLessPressed(experience.id);
               }}
@@ -84,7 +87,7 @@ export function ExperienceDetail({
           </div>
         </div>
       </div>
-      <div className="u-full-width line-spacing two columns hide-on-mobile" />
+      <div className="u-full-width experience-detail__line-spacing two columns hide-on-mobile" />
       <svg className="one column hide-on-mobile" height="20" width="24">
         <line
           x1="12"

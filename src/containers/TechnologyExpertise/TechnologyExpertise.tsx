@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import { TechnologyExpertiseSection } from '../../components/TechnologyExpertiseSection/TechnologyExpertiseSection';
 import { technologies } from '../../data/technologies';
-import './TechnologyExpertise.css';
 
 export function TechnologyExpertise() {
   const technologyKeys = Object.keys(technologies);

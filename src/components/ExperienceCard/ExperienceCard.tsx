@@ -28,14 +28,13 @@ export class ExperienceCard extends React.Component<IProps, IState> {
     };
   }
 
+  // row-structure experience-card
+
   public render() {
     return (
-      <div
-        className="row row-structure experience-card"
-        id={this.experience.id}
-      >
+      <div className="row experience-section" id={this.experience.id}>
         <h6
-          className="u-full-width two columns date hide-on-mobile"
+          className="u-full-width two columns date hide-on-mobile experience-section__date"
           style={{ opacity: this.state.hoverActive ? 1 : 0 }}
         >
           {this.experience.datestring}
@@ -69,7 +68,7 @@ export class ExperienceCard extends React.Component<IProps, IState> {
         </svg>
         <div className="nine columns">
           <div
-            className="card-container"
+            className="card card--experience"
             onMouseEnter={() => {
               this.setState({ hoverActive: true });
             }}
@@ -77,7 +76,7 @@ export class ExperienceCard extends React.Component<IProps, IState> {
               this.setState({ hoverActive: false });
             }}
           >
-            <div className="row flex-row">
+            <div className="row row--experience-card">
               <img
                 className="three columns"
                 src={this.experience.imagePath}
@@ -89,26 +88,27 @@ export class ExperienceCard extends React.Component<IProps, IState> {
               />
               <div className="nine columns">
                 <div
-                  className="card-header"
+                  className="card__header"
                   aria-label={`opens ${this.experience.companyLink}`}
                   onClick={() => {
                     this.handleClickToOpenCompanyPage();
                   }}
                 >
-                  <h5>
+                  <h5 className="card__title">
                     {this.experience.title}
                     <FontAwesomeIcon
+                      className="card__icon"
                       icon={faExternalLinkAlt}
                       style={{ opacity: this.state.hoverActive ? 1 : 0 }}
                     />
                   </h5>
-                  <h6>{this.experience.subtitle}</h6>
+                  <h6 className="card__subtitle">{this.experience.subtitle}</h6>
                 </div>
-                <hr className="card-line" />
-                <div className="card-body">{this.experience.intro}</div>
-                <div className="row card-button-container">
+                <hr className="card__line" />
+                <div className="card__body">{this.experience.intro}</div>
+                <div className="row card__button-container">
                   <button
-                    className="offset-by-three six columns"
+                    className="offset-by-three six columns card__button"
                     onClick={() => {
                       this.props.handleShowMorePressed(this.experience);
                     }}

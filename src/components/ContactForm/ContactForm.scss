@@ -1,11 +1,11 @@
 @import "../../styles.scss";
 
-.contact-form button:disabled {
+.contact-form__button:disabled {
   cursor: not-allowed;
   border-color: $lighter-gray !important;
   color: $lighter-gray !important;
 }
 
-.contact-form textarea {
+.contact-form__textarea {
   resize: vertical;
 }

@@ -1,36 +1,40 @@
 @import './styles.scss';
 
-.gradient-container {
+.background--gradient {
   background: $elephant; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    $elephant,
-    $tradewind
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    $elephant,
-    $tradewind
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background:
+    -webkit-linear-gradient(
+      180deg,
+      $elephant,
+      $tradewind
+    ); /* Chrome 10-25, Safari 5.1-6 */
+
+  background:
+    linear-gradient(
+      180deg,
+      $elephant,
+      $tradewind
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.header-container {
-  padding-top: 10rem;
-}
-
-.section-container {
+.section {
   padding-top: 5rem;
 }
 
+.section--header {
+  padding-top: 10rem;
+}
+
 body {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 @media only screen and (max-width: $tablet-width) {
-  .header-container {
-    padding-top: 10rem;
-  }
-  .section-container {
+  .section {
     padding-top: 5rem;
+  }
+
+  .section--header {
+    padding-top: 10rem;
   }
 }

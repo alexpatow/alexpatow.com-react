@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 
 import ICertification from '../../typings/ICertification';
-import './CertificationCard.css';
 
 interface IProps {
   certification: ICertification;
@@ -18,19 +17,17 @@ function handleButtonClicked(link: string): void {
 
 export const CertificationCard = ({ certification }: IProps) => {
   return (
-    <div className="certification card-container">
-      <div className="card-header">
-        <h5>{certification.title}</h5>
-        <h6>{certification.subtitle}</h6>
-        <p>{certification.date}</p>
+    <div className="card">
+      <div className="card__header">
+        <h5 className="card__title">{certification.title}</h5>
+        <h6 className="card__subtitle">{certification.subtitle}</h6>
+        <p className="card__year">{certification.date}</p>
       </div>
-      <hr className="card-line" />
-      <div className="card-body">
-        <p>{certification.body}</p>
-      </div>
-      <div className="row card-button-container">
+      <hr className="card__line" />
+      <p className="card__body-text">{certification.body}</p>
+      <div className="row card__button-container">
         <button
-          className="six columns"
+          className="six columns card__button"
           aria-label="open certificate"
           onClick={() => {
             handleButtonClicked(certification.certificateLink);
@@ -39,7 +36,7 @@ export const CertificationCard = ({ certification }: IProps) => {
           Certificate <FontAwesomeIcon icon={faCertificate} />
         </button>
         <button
-          className="six columns"
+          className="six columns card__button"
           aria-label="open external certification link"
           onClick={() => {
             handleButtonClicked(certification.additionalInfoLink);

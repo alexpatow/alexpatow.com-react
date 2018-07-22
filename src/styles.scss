@@ -39,10 +39,10 @@ $elf-green: #068587;
 $tradewind: #4fb99f;
 $saffron: #f2b134;
 $flamingo: #ed553b;
-$white: #ffffff;
+$white: #fff;
 $lighter-gray: #d1d1d1;
-$light-gray: #cccccc;
-$dark-gray: #888888;
+$light-gray: #ccc;
+$dark-gray: #888;
 
 // As Button Utility
 .as-button:active,
@@ -70,12 +70,6 @@ $dark-gray: #888888;
   align-items: center;
 }
 
-.u-vertically-center-elements-col {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
 .u-capitalize {
   text-transform: capitalize;
 }
@@ -86,13 +80,83 @@ $dark-gray: #888888;
   }
 }
 
-.card-header h5:hover,
-.card-header svg:hover {
-  color: $elf-green;
+// Basic Card
+.card {
+  background-color: $white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.33rem;
+  margin-bottom: 1rem;
+  padding: 2rem;
+}
+
+.card .card__header {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.card .card__header:hover {
   cursor: pointer;
 }
 
-button:hover {
+.card .card__title {
+  color: $elephant;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card__icon {
+  margin-left: 1rem;
+}
+
+.card .card__subtitle {
+  margin-bottom: 1rem;
+}
+
+.card .card__year {
+  margin-bottom: 1rem;
+}
+
+.card .card__header:hover .card__title,
+.card .card__header:hover .card__icon,
+.card .card__header:hover .card__subtitle,
+.card .card__header:hover .card__year {
+  color: $elf-green;
+}
+
+.card .card__line {
+  color: $light-gray;
+  line-height: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card .card__body-text {
+  margin-bottom: 1rem;
+}
+
+.card .card__button-container {
+  margin-bottom: 0;
+}
+
+.card .card__button {
+  margin-bottom: 0;
+}
+
+.card .card__button:hover {
   color: $elf-green;
   border-color: $elf-green;
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .card .card__button-container {
+    margin-bottom: 1rem;
+  }
+
+  .card .card__button {
+    margin-bottom: 1rem;
+  }
+
+  .card .card__button:last-of-type {
+    margin-bottom: 0;
+  }
 }

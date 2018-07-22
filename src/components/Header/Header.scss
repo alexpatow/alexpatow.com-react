@@ -1,24 +1,24 @@
 @import '../../styles.scss';
 
-header .nav-flex {
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-header h1 {
+.nav__header {
   color: $white;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
   line-height: 1;
   margin-bottom: 0;
 }
 
-nav {
+.nav__button-group {
   margin-top: 1rem;
 }
 
-nav button {
+.nav__button {
   color: $white;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
   border: 0;
@@ -27,18 +27,14 @@ nav button {
   margin: 0 1rem;
   padding: 0 1rem;
   font-size: 1.3rem;
-
-  svg {
-    margin-left: .5rem;
-  }
 }
 
-nav button:first-of-type {
+.nav__button:first-of-type {
   margin-left: 0;
 }
 
-nav button:hover,
-nav button:focus {
+.nav__button:hover,
+.nav__button:focus {
   border-color: $white;
   color: $white;
   transition-property: border-color, color;
@@ -46,14 +42,20 @@ nav button:focus {
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
 
+.nav__icon {
+  margin-left: 0.5rem;
+}
+
 @media only screen and (max-width: $tablet-width) {
-  header .nav-flex {
+  .nav {
     justify-content: center;
   }
-  nav > button {
+
+  .nav__button {
     width: 100%;
   }
-  nav button:first-of-type {
+
+  .nav__button:first-of-type {
     margin-left: 1rem;
   }
 }

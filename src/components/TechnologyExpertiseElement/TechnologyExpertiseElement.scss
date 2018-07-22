@@ -1,13 +1,20 @@
-.technology-expertise-element > img {
+.technology-expertise-element {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.technology-expertise-element__image {
   width: 20rem;
   height: 15rem;
   object-fit: contain;
 }
 
-.technology-expertise-element > img:hover {
+.technology-expertise-element__image:hover {
   cursor: pointer;
 }
 
-.technology-expertise-element > h6 {
+.technology-expertise-element__title {
   margin-top: 1rem;
+  text-align: center;
 }
