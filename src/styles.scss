@@ -76,6 +76,10 @@ $dark-gray: #888888;
   flex-direction: column;
 }
 
+.u-capitalize {
+  text-transform: capitalize;
+}
+
 @media only screen and (max-width: 1050px) {
   .hide-on-mobile {
     display: none;
