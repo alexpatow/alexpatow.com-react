@@ -1,5 +1,9 @@
 @import "../../styles.scss";
 
+.contact-form__button {
+  padding: 0;
+}
+
 .contact-form__button:hover {
   color: $elf-green;
   border-color: $elf-green;

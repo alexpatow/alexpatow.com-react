@@ -25,7 +25,7 @@
   padding: 2rem;
 }
 
-.card--experience img {
+.card--experience .card__image {
   height: 10rem;
   object-fit: contain;
   align-self: center;
@@ -40,7 +40,7 @@
     margin-bottom: inherit;
   }
 
-  .card--experience img {
+  .card--experience .card__image {
     height: 5rem;
     padding-bottom: 1rem;
   }
