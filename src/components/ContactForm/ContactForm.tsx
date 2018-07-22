@@ -72,7 +72,7 @@ export class ContactForm extends React.Component<{}, IState> {
             <label htmlFor="body">Message:</label>
             <textarea
               id="body"
-              className="u-full-width"
+              className="u-full-width contact-form__textarea"
               placeholder="Hi there!"
               aria-required={true}
               required={true}
@@ -82,7 +82,7 @@ export class ContactForm extends React.Component<{}, IState> {
         </div>
         <div className="row">
           <button
-            className="offset-by-four four columns"
+            className="offset-by-four four columns contact-form__button"
             onClick={event => {
               this.handleSubmit(event);
             }}

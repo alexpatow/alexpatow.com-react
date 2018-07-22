@@ -65,9 +65,9 @@ export class Experience extends React.Component<{}, IState> {
 
     return (
       <div>
-        <div className="row" id="experience">
+        <div className="row experience" id="experience">
           <div className="twelve columns">
-            <h2 className="experiences">Experience</h2>
+            <h2 className="experience__header">Experience</h2>
           </div>
         </div>
         {experienceCards}

@@ -13,14 +13,17 @@ function handleMoreInfoButtonClicked(link: string): void {
 
 export const TechnologyExpertiseElement = ({ technology }: IProps) => {
   return (
-    <div className="technology-expertise-element u-vertically-center-elements-col">
+    <div className="technology-expertise-element">
       <img
+        className="technology-expertise-element__image"
         src={technology.imagePath}
         onClick={() => {
           handleMoreInfoButtonClicked(technology.externalLink);
         }}
       />
-      <h6 className="u-center-text">{technology.title}</h6>
+      <h6 className="technology-expertise-element__title">
+        {technology.title}
+      </h6>
     </div>
   );
 };

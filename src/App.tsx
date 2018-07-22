@@ -1,48 +1,48 @@
 import * as React from 'react';
 
+import { Footer } from './components/Footer/Footer';
+import { Header } from './components/Header/Header';
 import { Certifications } from './containers/Certifications/Certifications';
 import { Contact } from './containers/Contact/Contact';
 import { Experience } from './containers/Experience/Experience';
-import { Footer } from './containers/Footer/Footer';
-import { Header } from './containers/Header/Header';
 import { Projects } from './containers/Projects/Projects';
 import { TechnologyExpertise } from './containers/TechnologyExpertise/TechnologyExpertise';
 
 import './App.css';
-import { Hero } from './containers/Hero/Hero';
+import { Hero } from './components/Hero/Hero';
 
 class App extends React.Component {
   public render() {
     return (
       <div className="body">
-        <div className="gradient-container">
+        <div className="background background--gradient">
           <div className="container">
-            <div className="header-container">
+            <div className="section section--header">
               <Header />
             </div>
-            <div className="section-container">
+            <div className="section">
               <Hero />
             </div>
-            <div className="section-container" id="experience">
+            <div className="section" id="experience">
               <Experience />
             </div>
           </div>
         </div>
-        <div className="white-container">
+        <div className="background">
           <div className="container">
-            <div className="section-container" id="projects">
+            <div className="section" id="projects">
               <Projects />
             </div>
-            <div className="section-container">
+            <div className="section">
               <Certifications />
             </div>
-            <div className="section-container">
+            <div className="section">
               <TechnologyExpertise />
             </div>
-            <div className="section-container">
+            <div className="section">
               <Contact />
             </div>
-            <div className="footer-container">
+            <div className="section">
               <Footer />
             </div>
           </div>
