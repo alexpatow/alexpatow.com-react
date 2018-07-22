@@ -17,7 +17,9 @@ function goToGithub(): void {
 }
 
 function goToResume(): void {
-  window.open('/assets/AlexPatowResume.pdf');
+  window.open(
+    'https://s3-us-west-2.amazonaws.com/alexpatow.com/assets/AlexPatowResume.pdf'
+  );
 }
 
 export const Header = ({}) => {
