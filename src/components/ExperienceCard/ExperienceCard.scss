@@ -1,0 +1,51 @@
+@import '../../styles.scss';
+
+.row.experience-section {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.experience-section__date {
+  color: $white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  margin-bottom: 0;
+  width: 17.333%;
+}
+
+.row.row--experience-card {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.card--experience {
+  margin-bottom: 1rem;
+  padding: 2rem;
+}
+
+.card--experience img {
+  height: 10rem;
+  object-fit: contain;
+  align-self: center;
+}
+
+.card--experience .card__body {
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 1050px) {
+  .row.experience-section {
+    margin-bottom: inherit;
+  }
+
+  .card--experience img {
+    height: 5rem;
+    padding-bottom: 1rem;
+  }
+
+  .row--experience-card {
+    display: block;
+  }
+}

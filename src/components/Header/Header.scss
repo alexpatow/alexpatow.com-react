@@ -1,0 +1,61 @@
+@import '../../styles.scss';
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav__header {
+  color: $white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.nav__button-group {
+  margin-top: 1rem;
+}
+
+.nav__button {
+  color: $white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  border: 0;
+  border-radius: 0;
+  border-bottom: 0.33rem solid transparent;
+  margin: 0 1rem;
+  padding: 0 1rem;
+  font-size: 1.3rem;
+}
+
+.nav__button:first-of-type {
+  margin-left: 0;
+}
+
+.nav__button:hover,
+.nav__button:focus {
+  border-color: $white;
+  color: $white;
+  transition-property: border-color, color;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.nav__icon {
+  margin-left: 0.5rem;
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .nav {
+    justify-content: center;
+  }
+
+  .nav__button {
+    width: 100%;
+  }
+
+  .nav__button:first-of-type {
+    margin-left: 1rem;
+  }
+}

@@ -1,0 +1,22 @@
+@import '../../styles.scss';
+
+.hero__text {
+  text-align: center;
+  color: $white;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  font-stretch: expanded;
+  transition-property: text-shadow;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.hero__text--underline {
+  text-decoration: underline;
+}
+
+.hero__intro-container {
+  transition-property: margin, text-shadow;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}

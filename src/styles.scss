@@ -1,0 +1,162 @@
+@import '../node_modules/normalize-scss/sass/normalize/import-now'; // import normalize-scss
+@import '../node_modules/skeleton-sass-official/skeleton/core/config'; // Skeleton Sass core loader
+
+// import default theme variables
+@import 'variables'; // theme variable overrides
+
+// import default theme styles
+@import '../node_modules/skeleton-sass-official/skeleton/themes/fresh/include_components'; // theme base styles
+@import '../node_modules/skeleton-sass-official/skeleton/themes/fresh/grid'; // theme grid styles
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+// Section Heading
+h2 {
+  font-weight: 200;
+}
+
+p,
+a,
+em,
+strong,
+li {
+  font-family: 'Open Sans', sans-serif;
+}
+
+// Color Variables
+$elephant: #112f41;
+$elf-green: #068587;
+$tradewind: #4fb99f;
+$saffron: #f2b134;
+$flamingo: #ed553b;
+$white: #fff;
+$lighter-gray: #d1d1d1;
+$light-gray: #ccc;
+$dark-gray: #888;
+
+// As Button Utility
+.as-button:active,
+.as-button:focus,
+.as-button.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+//Utilities
+.u-center-text {
+  text-align: center;
+}
+
+.u-center-elements {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.u-vertically-center-elements {
+  display: flex;
+  align-items: center;
+}
+
+.u-capitalize {
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width: 1050px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+// Basic Card
+.card {
+  background-color: $white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.33rem;
+  margin-bottom: 1rem;
+  padding: 2rem;
+}
+
+.card .card__header {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.card .card__header:hover {
+  cursor: pointer;
+}
+
+.card .card__title {
+  color: $elephant;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card__icon {
+  margin-left: 1rem;
+}
+
+.card .card__subtitle {
+  margin-bottom: 1rem;
+}
+
+.card .card__year {
+  margin-bottom: 1rem;
+}
+
+.card .card__header:hover .card__title,
+.card .card__header:hover .card__icon,
+.card .card__header:hover .card__subtitle,
+.card .card__header:hover .card__year {
+  color: $elf-green;
+}
+
+.card .card__line {
+  color: $light-gray;
+  line-height: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card .card__body-text {
+  margin-bottom: 1rem;
+}
+
+.card .card__button-container {
+  margin-bottom: 0;
+}
+
+.card .card__button {
+  margin-bottom: 0;
+}
+
+.card .card__button:hover {
+  color: $elf-green;
+  border-color: $elf-green;
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .card .card__button-container {
+    margin-bottom: 1rem;
+  }
+
+  .card .card__button {
+    margin-bottom: 1rem;
+  }
+
+  .card .card__button:last-of-type {
+    margin-bottom: 0;
+  }
+}

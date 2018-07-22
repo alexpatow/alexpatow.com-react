@@ -1,0 +1,19 @@
+.footer__text--left {
+  text-align: left;
+}
+
+.footer__text--center {
+  text-align: center;
+}
+
+.footer__text--right {
+  text-align: right;
+}
+
+@media only screen and (max-width: 1050px) {
+  .footer__text--left,
+  .footer__text--center,
+  .footer__text--right {
+    text-align: center;
+  }
+}
