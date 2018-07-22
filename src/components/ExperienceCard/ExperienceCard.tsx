@@ -78,7 +78,7 @@ export class ExperienceCard extends React.Component<IProps, IState> {
           >
             <div className="row row--experience-card">
               <img
-                className="three columns"
+                className="three columns card__image"
                 src={this.experience.imagePath}
                 alt={`${this.experience.title} logo`}
                 aria-label={`opens ${this.experience.companyLink}`}
