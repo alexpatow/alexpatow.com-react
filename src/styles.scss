@@ -70,6 +70,12 @@ $dark-gray: #888888;
   align-items: center;
 }
 
+.u-vertically-center-elements-col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 @media only screen and (max-width: 1050px) {
   .hide-on-mobile {
     display: none;

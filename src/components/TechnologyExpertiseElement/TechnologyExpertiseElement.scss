@@ -1,0 +1,13 @@
+.technology-expertise-element > img {
+  width: 20rem;
+  height: 15rem;
+  object-fit: contain;
+}
+
+.technology-expertise-element > img:hover {
+  cursor: pointer;
+}
+
+.technology-expertise-element > h6 {
+  margin-top: 1rem;
+}

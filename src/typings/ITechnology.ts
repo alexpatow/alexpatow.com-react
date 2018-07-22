@@ -1,6 +1,13 @@
-export default interface ITechnology {
+export interface ITechnology {
   title: string;
-  body: string;
   imagePath: string;
   externalLink: string;
 }
+
+export type technologySections =
+  | 'languages'
+  | 'frontend'
+  | 'backend'
+  | 'platforms';
+
+export type ITechnologies = { [key in technologySections]: ITechnology[] };
