@@ -6,10 +6,19 @@ export const experiences: Experience[] = [
     title: 'Accenture',
     subtitle: 'Digital Business Integration Consultant',
     intro:
-      'Member of the Mobility Delivery group, expertise in full stack development for Internet of' +
-      ' Things projects. Experience with Hybrid Mobile Applications, API design, Technical Architecture, and' +
-      ' Continuous Delivery.',
+      'Member of the Mobility Delivery group, expertise in full stack JavaScript/Typescript and Technical Architecture. Experience in all stages of development from conducting user research to deploying solutions both as a Team Lead and a Developer.',
     body: [
+      {
+        heading: 'Accenture Logistics Platform',
+        bullets: [
+          'As a Development Team Lead, managed near-shore and off-shore developers to enhance Accenture’s proprietary Same-Day Delivery as a Service platform',
+          'Platform includes a mobile app (native Android), multiple single page web applications (Angular 5), and a diverse set of APIs (Node.js/Express)',
+          'Technical Architect for the design of a robust, microservice-based architecture',
+          'Established solid relationships with clients to ensure their product and performance expectations were met',
+        ],
+        additionalInfoLink:
+          'https://www.accenture.com/us-en/service-accenture-logistics-platform',
+      },
       {
         heading: 'Digital Agriculture Service',
         bullets: [
@@ -49,6 +58,37 @@ export const experiences: Experience[] = [
     datestring: 'July 2015-Today',
     imagePath: '/assets/experiences/accenture.png',
     companyLink: 'https://www.accenture.com/',
+  },
+  {
+    id: 'projectsearch',
+    title: 'Project SEARCH',
+    subtitle: 'Engineering Team Leader',
+    intro:
+      'Project SEARCH (Scanning Ears for Child Health) attempts to solve one of the longest standing and most fundamental challenges in global public health: identifying individuals over time and space.',
+    body: [
+      {
+        bullets: [
+          "The goal of Project SEARCH was to develop a method for scanning children's ears in" +
+            ' rural African clinics to ensure that each patient would be properly identified to' +
+            ' improve their quality of care',
+          'The technique that the researchers from the School of Public Health developed was to' +
+            ' scan the patients ear with a cell phone and, through computer vision analysis,' +
+            ' identify the patient to their records',
+          'The mechanical engineering team worked with the researchers to design a holder which' +
+            ' would properly place any cell phone a certain distance away from the ear,' +
+            ' eliminating variation and improving reproducibility and accuracy',
+          'My role was to lead the engineering team in developing a mechanical device which' +
+            ' could hold any smartphone and allow clinicians to properly position the device with ease',
+          'It was important to consider where this device might be used; user research and robust design were crucial to this project',
+          'The final device was 3D printed, but will easily scale to be mass produced using' +
+            ' injection molding',
+        ],
+        additionalInfoLink: 'http://cs-people.bu.edu/sbargal/SEARCH.pdf',
+      },
+    ],
+    datestring: 'October 2014-January 2015',
+    imagePath: '/assets/experiences/bu-sph.png',
+    companyLink: 'http://cs-people.bu.edu/sbargal/SEARCH.pdf',
   },
   {
     id: 'ptc',
