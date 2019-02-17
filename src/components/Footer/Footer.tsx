@@ -7,10 +7,10 @@ export const Footer = () => {
 
   return (
     <footer className="row footer">
-      <div className="four columns footer__text--left">
+      <div className="four columns footer__text footer__text--left">
         <span>© Alex Patow {year}</span>
       </div>
-      <div className="four columns footer__text--center">
+      <div className="four columns footer__text footer__text--center">
         <a
           href="mailto:alexpatow@alexpatow.com"
           aria-label="send email to alexpatow@alexpatow.com"
@@ -18,7 +18,7 @@ export const Footer = () => {
           alexpatow@alexpatow.com
         </a>
       </div>
-      <div className="four columns footer__text--right">
+      <div className="four columns footer__text footer__text--right">
         <a href="tel:+19529562602" aria-label="call +1 (952) 956-2602">
           +1 (952) 956-2602
         </a>
