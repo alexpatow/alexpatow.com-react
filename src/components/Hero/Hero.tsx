@@ -7,12 +7,22 @@ export const Hero = () => {
     <div className="row hero">
       <div className="twelve columns hero__container">
         <h4 className="hero__text">
-          Full Stack{' '}
-          <span className="hero__text--underline">JavaScript Developer</span>{' '}
-          and <span className="hero__text--underline">Technical Architect</span>{' '}
-          with a solid, proven ability to transform software solutions from
-          initial brainstorming to production release
+          Full Stack Developer with a proven ability to transform software
+          solutions from initial brainstorming to production release.
         </h4>
+        <h5 className="hero__text">
+          Works at{' '}
+          <a href="https://www.accenture.com/" target="_blank">
+            Accenture
+          </a>
+          <br />
+          Graduated from{' '}
+          <a href="https://www.bu.edu/" target="_blank">
+            Boston University
+          </a>
+          <br />
+          Lives in Chicago
+        </h5>
       </div>
     </div>
   );

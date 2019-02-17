@@ -1,40 +1,33 @@
 @import './styles.scss';
 
-.background--gradient {
-  background: $elephant; /* fallback for old browsers */
-  background:
-    -webkit-linear-gradient(
-      180deg,
-      $elephant,
-      $tradewind
-    ); /* Chrome 10-25, Safari 5.1-6 */
-
-  background:
-    linear-gradient(
-      180deg,
-      $elephant,
-      $tradewind
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.section {
-  padding-top: 5rem;
-}
-
-.section--header {
+.background--content {
   padding-top: 10rem;
+  flex: 1 0 auto;
 }
 
-body {
-  padding-bottom: 1rem;
+.background--footer {
+  flex-shrink: 0;
 }
 
-@media only screen and (max-width: $tablet-width) {
-  .section {
-    padding-top: 5rem;
-  }
-
-  .section--header {
-    padding-top: 10rem;
-  }
+.background--gradient {
+  /* fallback for old browsers */
+  background: $royal-blue;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-radial-gradient(
+    circle farthest-corner at 20% 19.3%,
+    $royal-blue 0%,
+    $malibu 125%
+  );
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: radial-gradient(
+    circle farthest-corner at 20% 19.3%,
+    $royal-blue 0%,
+    $malibu 125%
+  );
 }

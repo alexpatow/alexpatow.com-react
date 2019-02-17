@@ -3,7 +3,9 @@
 Update to [alexpatow.com](alexpatow.com), built using React and Typescript.
 
 ## Installation
+
 Requires:
+
 - Node 8+
 - npm
 - yarn
@@ -18,4 +20,5 @@ reload if you change any of the source files.
 Run `yarn build` to build the project. The build artifacts will be stored in the `build/` directory.
 
 ## More Questions?
+
 Contact [alexpatow@alexpatow.com](mailto:alexpatow@alexpatow.com)

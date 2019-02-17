@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<header
+  className="row"
+>
+  <div
+    className="twelve columns header"
+  >
+    <h1
+      aria-label="return to home"
+      className="as-button header__title"
+    >
+      Alex Patow
+    </h1>
+  </div>
+</header>
+`;

@@ -1,0 +1,57 @@
+@import '../../styles.scss';
+
+.content {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.content__button {
+  border: 0;
+  color: $white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.4rem;
+  font-stretch: 125%;
+  font-style: normal;
+  font-weight: 200;
+  margin: 0 1rem;
+  padding: 0 1rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  text-transform: capitalize;
+}
+
+.content__button:first-of-type {
+  margin-left: 0;
+}
+
+.content__button:hover,
+.content__button:focus {
+  color: $malibu;
+  transition-property: color;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.content__icon {
+  color: $white;
+  margin-left: 1rem;
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: $mobile-landscape-width) {
+  .content {
+    justify-content: center;
+  }
+
+  .content__button {
+    font-size: 1.8rem;
+    margin: 0;
+    width: 100%;
+  }
+
+  .content__icon {
+    margin-left: 1rem;
+    margin-top: 0;
+    font-size: 1.8rem;
+  }
+}

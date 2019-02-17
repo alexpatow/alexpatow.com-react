@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<footer
+  className="row footer"
+>
+  <div
+    className="four columns footer__text footer__text--left"
+  >
+    <span>
+      © Alex Patow 
+      2019
+    </span>
+  </div>
+  <div
+    className="four columns footer__text footer__text--center"
+  >
+    <a
+      aria-label="send email to alexpatow@alexpatow.com"
+      href="mailto:alexpatow@alexpatow.com"
+    >
+      alexpatow@alexpatow.com
+    </a>
+  </div>
+  <div
+    className="four columns footer__text footer__text--right"
+  >
+    <a
+      aria-label="call +1 (952) 956-2602"
+      href="tel:+19529562602"
+    >
+      +1 (952) 956-2602
+    </a>
+  </div>
+</footer>
+`;
