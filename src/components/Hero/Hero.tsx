@@ -11,6 +11,8 @@ export const Hero = () => {
           solutions from initial brainstorming to production release.
         </h4>
         <h5 className="hero__text">
+          Lives in Boston
+          <br />
           Works at{' '}
           <a href="https://www.accenture.com/" target="_blank">
             Accenture
@@ -20,8 +22,6 @@ export const Hero = () => {
           <a href="https://www.bu.edu/" target="_blank">
             Boston University
           </a>
-          <br />
-          Lives in Chicago
         </h5>
       </div>
     </div>

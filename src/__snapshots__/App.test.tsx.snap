@@ -38,6 +38,8 @@ exports[`renders correctly 1`] = `
           <h5
             className="hero__text"
           >
+            Lives in Boston
+            <br />
             Works at
              
             <a
@@ -55,8 +57,6 @@ exports[`renders correctly 1`] = `
             >
               Boston University
             </a>
-            <br />
-            Lives in Chicago
           </h5>
         </div>
       </div>

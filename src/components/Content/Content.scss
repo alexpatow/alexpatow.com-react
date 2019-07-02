@@ -24,7 +24,9 @@
 }
 
 .content__button:hover,
-.content__button:focus {
+.content__button:focus,
+.content__button:hover .content__icon,
+.content__button:focus .content__icon {
   color: $malibu;
   transition-property: color;
   transition-duration: 0.5s;
