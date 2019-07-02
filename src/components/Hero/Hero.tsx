@@ -7,8 +7,7 @@ export const Hero = () => {
     <div className="row hero">
       <div className="twelve columns hero__container">
         <h4 className="hero__text">
-          Full Stack Developer with a proven ability to transform software
-          solutions from initial brainstorming to production release.
+          Proven ability to lead digital transformation projects from conception to maintenance.
         </h4>
         <h5 className="hero__text">
           Lives in Boston
