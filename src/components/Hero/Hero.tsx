@@ -10,11 +10,11 @@ export const Hero = () => {
           Proven ability to lead digital transformation projects from conception to maintenance.
         </h4>
         <h5 className="hero__text">
-          Lives in Boston
+          Lives in New York City
           <br />
           Works at{' '}
-          <a href="https://www.accenture.com/" target="_blank">
-            Accenture
+          <a href="https://www.eqtpartners.com/" target="_blank">
+            EQT Partners
           </a>
           <br />
           Graduated from{' '}
