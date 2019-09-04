@@ -5,9 +5,10 @@
   margin-top: 1rem;
 }
 
-.content__button {
+.content__link {
   border: 0;
   color: $white;
+  cursor: pointer;
   font-family: 'Raleway', sans-serif;
   font-size: 2.4rem;
   font-stretch: 125%;
@@ -15,18 +16,20 @@
   font-weight: 200;
   margin: 0 1rem;
   padding: 0 1rem;
+  text-decoration: none;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   text-transform: capitalize;
 }
 
-.content__button:first-of-type {
+.content__link:first-of-type {
   margin-left: 0;
+  padding-left: 0;
 }
 
-.content__button:hover,
-.content__button:focus,
-.content__button:hover .content__icon,
-.content__button:focus .content__icon {
+.content__link:hover,
+.content__link:focus,
+.content__link:hover .content__icon,
+.content__link:focus .content__icon {
   color: $malibu;
   transition-property: color;
   transition-duration: 0.5s;
@@ -41,14 +44,16 @@
 }
 
 @media only screen and (max-width: $mobile-landscape-width) {
-  .content {
-    justify-content: center;
+  .content__container {
+    display: flex;
+    flex-direction: column;
   }
 
-  .content__button {
+  .content__link {
     font-size: 1.8rem;
     margin: 0;
-    width: 100%;
+    padding: 0;
+    text-align: left;
   }
 
   .content__icon {
