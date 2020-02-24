@@ -1,6 +1,6 @@
 {
   "name": "alexpatow.com-react",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "private": true,
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
@@ -12,6 +12,7 @@
     "test": "npm-run-all build-css test-script",
     "test-script": "react-scripts-ts test --env=jsdom",
     "test-local": "react-scripts-ts test --env=jsdom",
+    "test-update-snapshots": "react-scripts-ts test -u --env=jsdom",
     "eject": "react-scripts-ts eject"
   },
   "dependencies": {
