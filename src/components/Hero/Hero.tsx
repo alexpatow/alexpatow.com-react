@@ -7,10 +7,10 @@ export const Hero = () => {
     <div className="row hero">
       <div className="twelve columns hero__container">
         <h4 className="hero__text">
-          Proven ability to lead digital transformation projects from conception to maintenance.
+          Proven ability to lead software engineering projects from conception to maintenance.
         </h4>
         <h5 className="hero__text">
-          Lives in New York City
+          Lives in Stockholm
           <br />
           Works at{' '}
           <a href="https://www.eqtpartners.com/" target="_blank">

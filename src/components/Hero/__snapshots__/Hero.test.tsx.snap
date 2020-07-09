@@ -10,12 +10,12 @@ exports[`renders correctly 1`] = `
     <h4
       className="hero__text"
     >
-      Proven ability to lead digital transformation projects from conception to maintenance.
+      Proven ability to lead software engineering projects from conception to maintenance.
     </h4>
     <h5
       className="hero__text"
     >
-      Lives in New York City
+      Lives in Stockholm
       <br />
       Works at
        
